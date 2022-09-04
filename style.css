@@ -1,0 +1,337 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Montserrat, sans-serif;
+    background-color: var(--bg);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+:root {
+    --bg: #E3E3E3;
+    --title: #CACACA;
+    --side-opace: #C1C1C1;
+    --side-menu: #E3E3E3;
+    --dark-gray: #585858;
+    --ligh-gray: #cbcbcb;
+    --side-bar-bgs: #EBEBEB;
+}
+
+.side-menu {
+    width: 200px;
+    height: 95%;
+    background-color: white;
+    border-radius: 50px;
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.side-menu h2,
+.size-div h2 {
+    color: var(--side-opace);
+    font-weight: 200;
+}
+
+.color-div,
+.clear-div,
+.size-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-radius: 50px;
+    background-color: var(--side-bar-bgs);
+    width: 100%;
+}
+
+.color-input {
+    width: 75px;
+    height: 75px;
+    border-radius: 9999px;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+}
+
+.color-input .color-inp {
+    border: 0;
+    padding: 0;
+    width: 200%;
+    height: 200%;
+    cursor: pointer;
+    transform: translate(-25%, -25%)
+}
+
+.color-btn-container,
+.clear-btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.color-btn-container {
+    margin-top: 1em;
+}
+
+.color-mode,
+.rainbow-mode,
+.clear-all,
+.eraser {
+    font-family: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: .5em;
+    border: 1px solid var(--dark-gray);
+    background-color: var(--ligh-gray);
+    border-radius: 50px;
+    width: 100%;
+    transition: .3s ease-in-out;
+}
+
+.color-mode:hover,
+.rainbow-mode:hover,
+.clear-all:hover,
+.eraser:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    background-color: rgb(175, 175, 175);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.color-mode:active,
+.rainbow-mode:active,
+.clear-all:active,
+.eraser:active {
+    background-color: var(--dark-gray);
+}
+
+.color-mode h3,
+.rainbow-mode h3,
+.clear-all h3,
+.eraser h3 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.grid-size-picker {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5em;
+}
+
+.grid-size-picker span {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 15px;
+    width: 15px;
+    margin-top: -4.5px;
+    border-radius: 9999px;
+    background: var(--dark-gray);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+  /* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 9999px;
+    background: var(--dark-gray);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 9999px;
+    background: var(--dark-gray);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    background: var(--ligh-gray);
+    border-radius: 1.3px;
+    border: 0.2px solid var(--dark-gray);
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+}
+
+input[type=range]:active::-webkit-slider-runnable-track {
+    background: gray;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    background: var(--ligh-gray);
+    border-radius: 1.3px;
+    border: 0.2px solid var(--dark-gray);
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+}
+input[type=range]::-ms-fill-lower {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    background: var(--ligh-gray);
+    border-radius: 1.3px;
+    border: 0.2px solid var(--dark-gray);
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: gray;
+}
+
+input[type=range]::-ms-fill-upper {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    background: var(--ligh-gray);
+    border-radius: 1.3px;
+    border: 0.2px solid var(--dark-gray);
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: gray;
+}
+
+/* Main part */
+
+.main-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    margin-left: 6em;
+}
+
+.main-part h1 {
+    color: var(--title);
+    font-size: 3rem;
+}
+
+.paint-part {
+    width: 1100px;
+    height: 520px;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+}
+
+.footer {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1em;
+    list-style: none;
+}
+
+.footer-text {
+    color: var(--title);
+    font-weight: 300;
+}
+
+.footer-link h3 {
+    color: var(--dark-gray);
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer-link {
+    display: inline-block;
+}
+
+.footer-link::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: var(--dark-gray);
+    transition: 300ms;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
