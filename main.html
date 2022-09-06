@@ -10,52 +10,55 @@
     <script src="app.js" defer></script>
 </head>
 <body>
+    <div class="wrapper">
+        <div class="side-menu">
+            <h2>MENU</h2>
 
-    <div class="side-menu">
-        <h2>MENU</h2>
-
-        <div class="color-div">
-            <div class="color-input">
-                <input type="color" class="color-inp">
+            <div class="color-div">
+                <div class="color-input">
+                    <input type="color" class="color-inp" value="#004CFF">
+                </div>
+                <div class="color-btn-container buttons">
+                    <button class="color-mode">Color</button>
+                    <button class="rainbow-mode">Rainbow</button>
+                </div>
             </div>
-            <div class="color-btn-container">
-                <button class="color-mode"><h3>Color</h3></button>
-                <button class="rainbow-mode"><h3>Rainbow</h3></button>
+            <div class="clear-div">
+                <div class="clear-btn-container">
+                    <button class="clear-all">Clear All</button>
+                    <div class="buttons"><button class="eraser">Eraser</button></div>
+                </div>
             </div>
-        </div>
-        <div class="clear-div">
-            <div class="clear-btn-container">
-                <button class="clear-all"><h3>Clear All</h3></button>
-                <button class="eraser"><h3>Eraser</h3></button>
-            </div>
-        </div>
-        <div class="size-div">
-            <h2>Grid size</h2>
-            <div class="grid-size-picker">
-                <span class="size-text">64</span>
-                <div class="range-input">
-                    <input type="range" class="range-inp" min="1" max="128">
+            <div class="size-div">
+                <h2>Grid size</h2>
+                <div class="grid-size-picker">
+                    <span class="size-text">32 x 32</span>
+                    <div class="range-input">
+                        <input type="range" class="range-inp" min="1" max="64" value="32">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <div class="main-part">
+        <div class="main-part">
 
-        <h1>Etch-A-Sketch</h1>
+            <h1>Etch-A-Sketch</h1>
 
-        <div class="paint-part"></div>
+            <div class="paint-parent"></div>
 
-        <div class="footer">
-            <ul>
-                <li><h3 class="footer-text">Copyright © 2022</h3></li>
-                <li><h3 class="footer-text">By Chernysh Artem</h3></li>
-                <li><a href="https://github.com/TemaTech" class="footer-link" target="_blank"><h3>My GitHub</h3></a></li>
-                <li><a href="https://twitter.com/cherrartem" class="footer-link" target="_blank"><h3>My Twitter</h3></a></li>
-            </ul>
+            <div class="footer">
+                <ul>
+                    <li><h3 class="footer-text">Copyright © <script>
+                        document.write(new Date().getFullYear())
+                        </script></h3></li>
+                    <li><h3 class="footer-text">By Chernysh Artem</h3></li>
+                    <li><a href="https://github.com/TemaTech" class="footer-link" target="_blank"><h3>My GitHub</h3></a></li>
+                    <li><a href="https://twitter.com/cherrartem" class="footer-link" target="_blank"><h3>My Twitter</h3></a></li>
+                </ul>
+            </div>
+
         </div>
-
     </div>
 </body>
 </html>
